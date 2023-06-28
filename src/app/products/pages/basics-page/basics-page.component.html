@@ -6,22 +6,112 @@
 
 <div class="grid">
 
- <div class="col-12 md:col-4">
-    <p-card header="UPPER-CASE">
-        {{nameLower | uppercase}}
-    </p-card>
- </div>
+    <div class="col-12 md:col-4">
+        <p-card header="UPPER-CASE">
+            {{nameLower | uppercase}}
+        </p-card>
+    </div>
 
- <div class="col-12 md:col-4">
-    <p-card header="lower-case">
-        {{nameUpper | lowercase}}
-    </p-card>
- </div>
- 
- <div class="col-12 md:col-4">
-    <p-card header="Title-Case">
-        {{fullName | titlecase}}
-    </p-card>
- </div>
- 
+    <div class="col-12 md:col-4">
+        <p-card header="lower-case">
+            {{nameUpper | lowercase}}
+        </p-card>
+    </div>
+
+    <div class="col-12 md:col-4">
+        <p-card header="Title-Case">
+            {{fullName | titlecase}}
+        </p-card>
+    </div>
+
+    <div class="col-12 md:col-6">
+        <p-card header="Date">
+            <ol>
+                <li>
+                    dateNow
+                </li>
+                <li>
+                    dateNow | date
+                </li>
+                <li>
+                    dateNow | date : short
+                </li>
+
+                <li>
+                    dateNow | date : long
+                </li>
+                <li>
+                    dateNow | date : MMMM
+                </li>
+                <li>
+                    dateNow | date : MMMM dd YYY
+                </li>
+                
+            </ol>
+            <hr>
+            <ol>
+                <li>
+                    dateNow | date : long : GMT-5
+                </li>
+                <li>
+                    dateNow | date : long : GMT-4
+                </li>
+                <li>
+                    dateNow | date : long : GMT-4 : es-NI
+                </li>
+                <li>
+                    dateNow | date : long : GMT-4 : en-US
+                </li>
+                <li>
+                    dateNow | date : long : GMT-4 : fr-CA
+                </li>
+            </ol>
+        </p-card>
+    </div>
+
+    <div class="col-12 md:col-6">
+        <p-card header="Title-Case">
+            <ol>
+                <li>
+                    {{dateNow}}
+                </li>
+                <li>
+                    {{dateNow | date}}
+                </li>
+                <li>
+                    {{dateNow | date : 'short'}}
+                </li>
+                <li>
+                    {{dateNow | date : 'long'}}
+                </li>
+                <li>
+                    {{dateNow | date : 'MMMM'}}
+                </li>
+                <li>
+                    {{dateNow | date : 'MMMM dd ,yyyy'}}
+                </li>
+                
+            </ol>
+            <hr>
+
+            <ol>
+                <li>
+                    {{dateNow | date : 'long' : 'GMT-5'}}
+                </li>
+                <li>
+                    {{dateNow | date : 'long' : 'GMT-4'}}
+                </li>
+                <li>
+                    {{dateNow | date : 'long' : 'GMT-3' : 'es-NI'}}
+                </li>
+                <li>
+                    {{dateNow | date : 'long' : 'GMT-3' : 'en-us'}}
+                </li>
+                <li>
+                    {{dateNow | date : 'long' : 'GMT-3' : 'fr-CA'}}
+                </li>
+            </ol>
+        </p-card>
+    </div>
+
 </div>
